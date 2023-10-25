@@ -60,7 +60,7 @@
         let userInput = document.querySelector("#userClass");
         function loadJSON() {
             const input = userInput.value;
-            const inputF = input.toString().toUpperCase().trimEnd();
+            const inputF = input.toString().toUpperCase().trimEnd().replace(" ", "");
             fetch("./courses.json")
             // turn into something javascript can understand
                 .then(response => response.json())
